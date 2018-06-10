@@ -1,0 +1,48 @@
+*{
+padding:0px;
+margin:0px;
+border:0px;
+}
+
+.body{
+    background-color: red;
+}
+
+.login-txt{
+    text-decoration: none;
+    float:right;
+    border:1px solid #fff;
+    padding:5px;
+    color: #fff;
+    margin-top:-5px;
+    margin-right:-17px;
+    font-family: 'Roboto', sans-serif;
+}
+.login-txt:hover {
+    background-color: #fff;
+color: #000;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav{
+    margin: 0 auto;
+}
+
+ .navbar-collapse .navbar-nav
+{
+  margin: 0 auto;
+    }
+
+.nav-txt{
+    color:#fff;
+   font-family: 'Exo', sans-serif;
+    font-family:30px;
+}
+
+
+.nav-txt:hover{
+  background-color: #fff; 
+    color:#000;
+}
+
+/*------------------------------------------------------------------------------*/

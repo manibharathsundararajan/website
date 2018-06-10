@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+     <link href="https://fonts.googleapis.com/css?family=Roboto|Josefin+Slab|Boogaloo|Allerta|Exo:800|Bitter:700" rel="stylesheet">
+     
+    <link rel="stylesheet" href="design.css">
+    <title>Location</title>
+  </head>
+  <body>
+      
+      <!--------------------------------------------------------------------------------------------------------------->
+   <nav class="navbar navbar-expand-lg" style="background-color:#9a0000;">
+     <img src="logo.png" width="70" height="70" class="d-inline-block align-top">
+  <a class="navbar-brand nav-txt" href="#">JOHN'S DENTAL SPECIALITY CENTER</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class=" glyphicon glyphicon-th" style="color:#fff; font-size:40px; margin-bottom:10px;">[=]</span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 180px;">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link nav-txt" href="index.html" >Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+          
+          
+        <a class="nav-link nav-txt" href="about-us.html" >About Us</a>
+        </li>
+         <li class="nav-item">
+        <a class="nav-link nav-txt" href="treatment.html" >Our Treatments</a>
+        </li>
+         <li class="nav-item">
+        <a class="nav-link nav-txt" href="appointment.html" >Get Appointment</a>
+        </li>
+         <li class="nav-item">
+        <a class="nav-link nav-txt" href="contact.html" >Contact Us</a>
+        </li>
+         <li class="nav-item">
+        <a class="nav-link nav-txt" href="location.html" >Location</a>
+        </li>
+         <li class="nav-item">
+        <a class="nav-link nav-txt" href="login.html" >Log In</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+<!----------------------------------------------------------------------------------------------------------->
+      <div id="map" style="width:100%;height:700px;background:yellow"></div>
+<!----------------------------------------------------------------------------------------------------------->
+    <div class="jumbotron jumbotron-fluid" style="margin-bottom: 0px; background-color: #fff;">
+  <div class="container">
+    <h1 class="display-4 text-center">Location</h1>
+    <h5 class="text-center" style="color: #ca0000;">  No : 18, 1st Floor, 
+      Medavakkam High Road,
+      Near Sholinganallur Signal,
+      </h5>
+      <h5 class="text-center" style="color: #ca0000;">Opp. To Krishna Super Market,
+      Sholinganallur,
+      Chennai-600 119. </h5>
+       <p class="text-center"> All major credit and debit cards are accepted</p>
+  </div>
+</div>
+<!----------------------------------------------------------------------------------------------------------->
+   <footer style="color:#fff; background-color:#0c0c0c; width:100%; height:120px;" class="text-center">
+      <br>
+       <a style="border-bottom: 1px solid #fff; ">Home  |   Treatments  |   Appointments  |  Contact Us  </a>
+       <br>
+         <br>
+      <a class="">© copyrights reserved Doc..Clinic!.com </a>
+
+      </footer>
+    <!--------------------------- jQuery first, then Popper.js, then Bootstrap JS ---------------------------->
+
+    <script src="jquery-3.3.1.slim.min.js"></script>
+    <script src="popper.min.js"></script>
+      <script src="bootstrap.min.js"></script>
+            <script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.12),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+  </body>
+</html>

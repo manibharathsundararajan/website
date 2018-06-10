@@ -1,0 +1,168 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Responsive NavBar</title>
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+    
+    <body>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void()" class="closebtn" onclick="closeNav()">&times;</a>
+            <li class="animate"><a href="#">Home</a></li>
+            <li class="animate"><a href="#">Clients</a></li>
+            <li class="animate"><a href="#">Services</a></li>
+            <li class="animate"><a href="#">Store</a></li>
+            <li class="animate"><a href="#">About</a></li>
+        </div>
+
+        <div class="navbar" id="main">
+            <ul>
+                <li class="slide-btn"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></li>
+                <li class="brand"><div><span style="color:#F41B17">MY</span> TECHNOLOGY</div></li>
+                <div class="nav">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">Home</a></li>
+                </div>
+            </ul>
+        </div>
+        <!--========================-->
+        <script src="jquery-master/jquery-1.10.2.js"></script>
+        <script src="main.js"></script>
+        <!--========================-->
+    </body>
+</html>
+
+<style>
+*{margin: 0px;padding: 0px;}
+body
+{
+    background-image: url(bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    font-family: "Lato", sans-serif;
+}
+
+
+/* Start SlideBar */
+.sidenav {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:rgba(51,55,68,0.6);
+    overflow-y:hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.animate:hover {padding-left:50px;background-color:orange;transition:all 0.7s ease;}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    //margin-left: 400px;
+}
+
+#main {
+    transition: margin-left .5s;
+    background-color: #000;
+}
+
+/* End SlideBar */
+
+
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    box-shadow: 3px 3px 3px #222222;
+    transition: 0.5s;
+    font-size: 20px;
+}
+.nav{padding-right: 40px;}
+.nav li{
+    float:right;
+    display: block;
+    padding:9px 10px;
+}
+.nav li a{
+    text-decoration: none;
+    color: #818181;
+}
+.nav li:hover{
+    border-bottom: 3px solid;
+    border-color: orange;
+    padding-bottom: 6px;
+    -webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+}
+.nav li a:hover, .nav li a:focus{
+    color: #f1f1f1;
+    transition:all 0.3s ease;
+}
+.slide-btn{
+    float: left;
+    display: block;
+    margin:0px 20px;
+    color: #818181;
+}
+.brand{
+    margin-left: 30px;
+    color: #FFF;
+    display: block;
+    float: left;
+    padding-top:9px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;} 
+  .test a {font-size: 18px;} 
+}
+@media screen and (max-width: 680px) {
+    
+    .nav a {overflow:hidden;display: none;}
+    .slide-btn {display: block;}
+}
+@media screen and (min-width: 680px) {
+    
+    .slide-btn {overflow:hidden;display: none;}
+}
+</style>
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.9)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
+}
+
+</script>
